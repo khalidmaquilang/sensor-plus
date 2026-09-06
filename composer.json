@@ -1,6 +1,6 @@
 {
     "name": "khalidmaquilang/sensors-plus",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "A NativePHP Mobile plugin to access the accelerometer, gyroscope, magnetometer and barometer sensors",
     "type": "nativephp-plugin",
     "license": "MIT",
