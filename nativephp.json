@@ -1,0 +1,138 @@
+{
+    "name": "khalidmaquilang/sensors-plus",
+    "version": "1.0.0",
+    "description": "A NativePHP Mobile plugin to access the accelerometer, gyroscope, magnetometer and barometer sensors",
+    "namespace": "SensorsPlus",
+    "keywords": ["sensors", "accelerometer", "gyroscope", "magnetometer", "barometer", "motion"],
+    "category": "utilities",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "Eskie Sirius Maquilang",
+        "email": "eskiesiriusmaquilang@gmail.com",
+        "url": ""
+    },
+    "homepage": "",
+    "repository": "",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "icon": "resources/icon.png",
+    "screenshots": [],
+    "bridge_functions": [
+        {
+            "name": "SensorsPlus.StartAccelerometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StartAccelerometer",
+            "ios": "SensorsPlusFunctions.StartAccelerometer",
+            "description": "Start listening to the raw accelerometer (includes gravity)"
+        },
+        {
+            "name": "SensorsPlus.StopAccelerometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StopAccelerometer",
+            "ios": "SensorsPlusFunctions.StopAccelerometer",
+            "description": "Stop listening to the raw accelerometer"
+        },
+        {
+            "name": "SensorsPlus.StartUserAccelerometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StartUserAccelerometer",
+            "ios": "SensorsPlusFunctions.StartUserAccelerometer",
+            "description": "Start listening to acceleration with gravity removed"
+        },
+        {
+            "name": "SensorsPlus.StopUserAccelerometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StopUserAccelerometer",
+            "ios": "SensorsPlusFunctions.StopUserAccelerometer",
+            "description": "Stop listening to the gravity-free accelerometer"
+        },
+        {
+            "name": "SensorsPlus.StartGyroscope",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StartGyroscope",
+            "ios": "SensorsPlusFunctions.StartGyroscope",
+            "description": "Start listening to the gyroscope"
+        },
+        {
+            "name": "SensorsPlus.StopGyroscope",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StopGyroscope",
+            "ios": "SensorsPlusFunctions.StopGyroscope",
+            "description": "Stop listening to the gyroscope"
+        },
+        {
+            "name": "SensorsPlus.StartMagnetometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StartMagnetometer",
+            "ios": "SensorsPlusFunctions.StartMagnetometer",
+            "description": "Start listening to the magnetometer"
+        },
+        {
+            "name": "SensorsPlus.StopMagnetometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StopMagnetometer",
+            "ios": "SensorsPlusFunctions.StopMagnetometer",
+            "description": "Stop listening to the magnetometer"
+        },
+        {
+            "name": "SensorsPlus.StartBarometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StartBarometer",
+            "ios": "SensorsPlusFunctions.StartBarometer",
+            "description": "Start listening to the barometer"
+        },
+        {
+            "name": "SensorsPlus.StopBarometer",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.StopBarometer",
+            "ios": "SensorsPlusFunctions.StopBarometer",
+            "description": "Stop listening to the barometer"
+        },
+        {
+            "name": "SensorsPlus.IsAvailable",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.IsAvailable",
+            "ios": "SensorsPlusFunctions.IsAvailable",
+            "description": "Check whether a given sensor is available on this device"
+        },
+        {
+            "name": "SensorsPlus.GetStatus",
+            "android": "com.khalidmaquilang.plugins.sensors_plus.SensorsPlusFunctions.GetStatus",
+            "ios": "SensorsPlusFunctions.GetStatus",
+            "description": "Get availability of all sensors on this device"
+        }
+    ],
+    "android": {
+        "min_version": 21,
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "min_version": "15.0",
+        "info_plist": {
+            "NSMotionUsageDescription": "This app uses motion sensors (accelerometer, gyroscope, magnetometer, barometer) to read live sensor data."
+        },
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Khalidmaquilang\\SensorsPlus\\Events\\AccelerometerChanged",
+        "Khalidmaquilang\\SensorsPlus\\Events\\UserAccelerometerChanged",
+        "Khalidmaquilang\\SensorsPlus\\Events\\GyroscopeChanged",
+        "Khalidmaquilang\\SensorsPlus\\Events\\MagnetometerChanged",
+        "Khalidmaquilang\\SensorsPlus\\Events\\BarometerChanged"
+    ],
+    "service_provider": "Khalidmaquilang\\SensorsPlus\\SensorsPlusServiceProvider",
+    "hooks": {
+        "copy_assets": "nativephp:sensors-plus:copy-assets"
+    }
+}
